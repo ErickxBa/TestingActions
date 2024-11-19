@@ -14,15 +14,9 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Navigate to project directory
-      working-directory: ./app  # Cambia a la carpeta del proyecto
-      run: pwd
-
     - name: Install dependencies
-      working-directory: ./app  # Asegúrate de que apunte al subdirectorio correcto
       run: npm install
 
     - name: Run tests
-      working-directory: ./app  # Ejecuta los tests en el subdirectorio
       run: npm test
 
